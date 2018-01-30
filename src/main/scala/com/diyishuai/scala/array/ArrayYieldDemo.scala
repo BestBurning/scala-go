@@ -1,4 +1,4 @@
-package com.diyishuai.scala
+package com.diyishuai.scala.array
 
 object ArrayYieldDemo {
 

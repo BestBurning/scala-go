@@ -1,4 +1,4 @@
-package com.diyishuai.scala
+package com.diyishuai.scala.collection
 
 import java.util
 
@@ -22,7 +22,6 @@ object MapDemo {
     println("mm.put(\"d\",4) : " + mm)
     println("================")
     println("HashMap :")
-    import java.util.HashMap
     val hm = new util.HashMap[String,String]()
     hm.put("a","a")
     println(hm)
