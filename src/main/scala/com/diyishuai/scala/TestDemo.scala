@@ -112,21 +112,31 @@ object TestDemo {
     //折叠：有初始值（有特定顺序）
     println(array.foldLeft(10)(_ + _))
     println(array.foldRight(10)(_ + _))
-
+    println()
 
 
     //聚合
-    val arr = List(List(1, 2, 3), List(3, 4, 5), List(2), List(0))
+    val arr = List(List(1, 2, 3), List(3, 4, 5), List(2), List(1))
+    println(arr.aggregate(1)(_+_.sum, _+_))
+    println(arr.aggregate(100)(_ + _.sum , _ + _))
+    println(arr.aggregate(1)(_ + _.sum , _ * _))
+    println(arr.aggregate(100)(_ + _.sum , _ * _))
 
-
+    println(arr.aggregate(2)(_ * _.sum , _ + _))
+    println(arr.aggregate(200)(_ * _.sum , _ + _))
+    println(arr.aggregate(2)(_ * _.sum , _ * _))
+    println(arr.aggregate(200)(_ * _.sum , _ * _))
+    println()
     val l1 = List(5,6,4,7)
     val l2 = List(1,2,3,4)
     //求并集
-
+    println(l1.union(l2))
+    println(l1 union l2)
     //求交集
-
+    println(l1.intersect(l2))
     //求差集
-
+    println(l1.diff(l2))
+    println(l2.diff(l1))
 //    println(r3)
 
 
