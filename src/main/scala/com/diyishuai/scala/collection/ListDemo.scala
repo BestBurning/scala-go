@@ -9,6 +9,7 @@ object ListDemo {
     val list = List(1,2,3,4,5,6)
     println(list)
     println(list(0))
+    println(1 :: 2 :: 3 :: 4 :: 5 :: 6 :: Nil)
     list.map(print)
     println()
     println("====")
@@ -35,6 +36,28 @@ object ListDemo {
 
     val list8 = list ++: list0
     println(list8)
-
+    println("==========")
+    println(List()+" | "+Nil)
+    val list9 = "aaa" :: "bbbb" :: "ccccc" :: Nil
+    println(list9)
+    println(list9.count(s => s.length == 4))
+    println(list9.drop(2))
+    println(list9.dropRight(2))
+    println(list9.exists(s=> s=="aaa"))
+    println(list9.filter(s=> s.length==4))
+    println(list9.forall(s => s.endsWith("b")))
+    list9.foreach(s=> print(s))
+    println()
+    list9.foreach(print)
+    println()
+    println(list9.head)
+    println(list9.init)
+    println(list9.isEmpty)
+    println(list9.last)
+    println(list9.length)
+    println(list9.map(s => s+"y"))
+    println(list9.mkString(". "))
+    println(list9.filterNot(s=> s.length == 4))
+    println(list9.reverse)
   }
 }
