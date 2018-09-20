@@ -7,7 +7,7 @@ object ListDemo {
       * seq 序列
       */
     val list = List(1,2,3,4,5,6)
-    println(list)
+    println(list.map(i => i -> i).toMap)
     println(list(0))
     println(1 :: 2 :: 3 :: 4 :: 5 :: 6 :: Nil)
     list.map(print)
@@ -59,5 +59,6 @@ object ListDemo {
     println(list9.mkString(". "))
     println(list9.filterNot(s=> s.length == 4))
     println(list9.reverse)
+    println(list9.groupBy(s => s.charAt(0)))
   }
 }
